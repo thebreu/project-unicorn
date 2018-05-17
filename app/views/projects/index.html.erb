@@ -1,1 +1,23 @@
 <h1>heythere</h1>
+
+
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Project</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+  <%@projects.each do |project| %>
+    <tr>
+      <th scope="row"><%= project.title %></th>
+      <td><%= project.description %></td>
+      <td><img src="<%= project.img_url %>" alt=""></td>
+      <td><%= project.type %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
